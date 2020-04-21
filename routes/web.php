@@ -21,7 +21,6 @@ Route::get('/url_prueba', function () {
     return 'Hola bros';
 });
 
-Route::get('/prueba.blade.php', function() {
-    return view('Prueba');
+Route::get('/prueba', function() {
+return view('prueba');
 });
-
