@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejercicio 9 </title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<script type="text/javascript">
+		function calcularEdad(){
+			let FechaNacimiento= document.getElementById('FechaNacimiento').value
+			let anioNacimiento= FechaNacimiento.substring(0,4)
+			let mesNacimiento= FechaNacimiento.substring(5,7)
+			let diaNacimiento= FechaNacimiento.substring(8,10)
+
+			let fechaActual= new Date()
+			let diaActual= fechaActual.getDate()
+			let mesActual= fechaActual.getMonth()+1
+			let anioActual= fechaActual.getFullYear()
+
+			if (mesNacimiento>=mesActual){
+				let cuentaAnio=calcularAnio(anioNacimiento,anioActual)
+				let cuentaMes=calcularMesMayor(mesNacimiento,mesActual)
+				document.write('Usted tiene '+(cuentaAnio-1) +' años,  con '+cuentaMes +' meses y '+diaActual +' dias')
+				//document.write('Usted tiene ${cuentaAnio-1} años, con ${cuentaMes} meses y ${diaActual} dias')
+			} else{
+				let cuentaAnio= calcularAnio(anioNac,anioActual)
+				let cuentaMes= calcularMes(mesNac,mesActual)
+				document.write('Usted tiene '+cuentaAnio +' años, con '+cuentaMes +' meses y '+diaActual +' dias')
+				//document.write('Usted tiene ${cuentaAnio} años, con ${cuentaMes} meses y ${diaActual} dias')
+			}
+		}
+
+		function calcularAnio(anioNaci,anioActu) {
+			let resultado= anioActu-anioNaci
+			return resultado
+		}
+
+		function calcularMes(mesNaci,mesActu) {
+			let resultado= mesActu-mesNaci
+		}
+
+		function calcularMesMayor(mesNaci,mesActu) {
+			let meses= 11
+			let resultado= (meses-mesNaci)+mesActu
+			return resultado
+		}
+
+	</script>
+</head>
+<body>
+	<div>
+		<p>Coloque su fecha nacimiento y la Web calculara sus dias vivos exactos</p>
+		<input type="date" id="FechaNacimiento">
+		<br>
+		<button class="btn btn-primary" onclick="calcularEdad()"> Calcular edad del usuario </button>
+	</div>
+</body>
+</html>

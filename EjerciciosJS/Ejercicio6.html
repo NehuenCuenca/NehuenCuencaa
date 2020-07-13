@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 6</title>
+	<script type="text/javascript">
+		function MostrarNros(min,max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+
+			return Math.floor(Math.random() * (1 + max - min) + min);
+		};
+		function CargarNros(){
+			for (i=0; i<10; i++){
+   				document.write(MostrarNros(1,500));
+   				document.write("<br>");
+   			}
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p>Clickee el boton para mostrar diez numeros aleatorios de un rango del 1 al 500</p>
+		<input type="button" name="BTNnrorandom" onclick="CargarNros()" value="Mostrar numeros aleatorios del 1 al 500">	
+	</div>
+</body>
+</html>

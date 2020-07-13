@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 7</title>
+	<script type="text/javascript">
+		function ActualizarTextoColor(idcolor) {
+			var texto = document.getElementById("palabra");
+			switch(idcolor){
+			  case "rojo":
+			    texto.style.color = 'red';
+			    break;
+			  case "azul":
+			    texto.style.color = 'blue';
+			    break;
+			  case "amarillo":
+			    texto.style.color = 'yellow';
+			    break;
+			}   
+		}
+	</script>
+</head>
+<body>
+	<div>	
+		<div>
+			<p>Clickee un boton para cambiar de color la palabra "Colores" de abajo</p>
+			<input type="button" value="Rojo" onclick="ActualizarTextoColor('rojo')">
+			<input type="button" value="Azul" onclick="ActualizarTextoColor('azul')">
+			<input type="button" value="Amarillo" onclick="ActualizarTextoColor('amarillo')">
+			<h2 style="color:black;" id="palabra">Colores</h2>
+		</div>	
+	</div>	
+</body>
+</html>

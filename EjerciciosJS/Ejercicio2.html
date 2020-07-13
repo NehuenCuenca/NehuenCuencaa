@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejercicio 2</title>
+
+<script type="text/javascript">
+    	function valor() {
+      		var n1 = document.getElementById("A").value;
+      		var n2 = document.getElementById("B").value;
+      		var n3 = (parseInt(n1) + parseInt(n2));
+      		C.value = n3;
+      		alert("Resultado: "+n3);
+    	}
+  	</script>
+
+</head>
+<body>
+	<div>
+		<p>Coloque un numero en las dos primeras casillas y seran sumados</p>
+		<label for="A"></label>
+		<input type="text" name="A" id="A" placeholder="numero 1">
+
+		<label for="B"></label>
+		<input type="text" name="B" id="B" placeholder="numero 2">
+		
+		<input type="button" onclick="valor()" name="R" id="R" value="Resultado">
+		<label for="C"></label>
+		<input type="text" name="C" id="C">
+	
+	</div>
+</body>
+</html>

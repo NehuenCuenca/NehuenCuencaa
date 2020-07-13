@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Ejercicio 4 </title>
+	<script type="text/javascript">
+		function CambiarColorRojo() {
+			document.getElementById('saludo').style.color = '#FF0000';	
+		}
+		function CambiarColorNegro() {
+			document.getElementById('saludo').style.color = '#17202A';	
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<h4>Coloque el mouse encima de la palabra "Hola Mundo" y este cambiara su color </h4>
+		<p style="color:#17202A;" id="saludo" onmouseenter="CambiarColorRojo()" onmouseleave="CambiarColorNegro()">Hola Mundo</p>
+	</div>
+</body>
+</html>

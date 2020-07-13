@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 10</title>
+	<script type="text/javascript">
+		function MostrarOpcion(idOP) {
+			var Uno = document.getElementById('kiwi').value;
+			var Dos = document.getElementById('manzana').value;
+			var Tres = document.getElementById('anana').value;
+			switch(idOP){
+			  case "OPuno":
+			    document.write('Opcion 1: '+ Uno);
+			    break;
+			  case "OPdos":
+			    document.write('Opcion 2: '+ Dos);
+			    break;
+			  case "OPtres":
+			    document.write('Opcion 3: '+ Tres);
+			    break;
+			}   
+		}
+	</script>
+</head>
+<body>
+	<div>	
+		<p>Clickee una opcion y este mostrara el valor entre parentesis</p>
+		<div>
+			Mostrar fruta 1 (KIWI)<input type="radio" id="kiwi" value="KIWI" onclick="MostrarOpcion('OPuno')">
+			<br>
+			Mostrar fruta 2 (MANZANA)<input type="radio" id="manzana" value="MANZANA" onclick="MostrarOpcion('OPdos')">
+			<br>
+			Mostrar fruta 3 (ANANA)<input type="radio" id="anana" value="ANANA" onclick="MostrarOpcion('OPtres')">
+		</div>	
+	</div>	
+</body>
+</html>

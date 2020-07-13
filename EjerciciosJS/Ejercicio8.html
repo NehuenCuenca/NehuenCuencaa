@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 8</title>
+	<script type="text/javascript">
+		function saludo() {
+			var NombreU = document.getElementById("nom").value;
+			var ApellidoU = document.getElementById("apel").value;
+			document.write("Hola "+NombreU +", "+ ApellidoU);
+		}
+	</script>
+</head>
+<body>
+	<p>Escriba su nombre y apellido y la Web lo saludará</p>
+	<div>
+		<input type="text" name="nom" id="nom" placeholder="Nombre"  >
+		<input type="text" name="apel" id="apel" placeholder="Apellido" >
+		<input type="button" onclick="saludo()" value="Enviar" >
+	</div>
+</body>
+</html>
